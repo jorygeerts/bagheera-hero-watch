@@ -23,24 +23,12 @@ func main() {
 		return
 	}
 
-	//offsets := []int{rpi.GPIO12, rpi.GPIO16, rpi.GPIO21, rpi.GPIO22}
-	//l, err := gpiocdev.RequestLines(chip, offsets, gpiocdev.AsOutput(1, 1, 1, 1))
-	//if err != nil {
-	//	panic(err)
-	//}
-	//// revert lines to input on the way out.
-	//defer func() {
-	//	l.Reconfigure(gpiocdev.AsInput)
-	//	fmt.Printf("Input pins %s:%v\n", chip, offsets)
-	//	l.Close()
-	//}()
+	red := team{name: "red", pin: rpi.GPIO7}
+	green := team{name: "green", pin: rpi.GPIO25}
+	blue := team{name: "blue", pin: rpi.GPIO24}
+	yellow := team{name: "yellow", pin: rpi.GPIO8}
 
-	red := team{name: "red", pin: rpi.GPIO21}
-	green := team{name: "green", pin: rpi.GPIO16}
-	blue := team{name: "blue", pin: rpi.GPIO12}
-	yellow := team{name: "yellow", pin: rpi.GPIO22}
-
-	teams := []team{red, green, blue, yellow}
+	teams := []*team{&red, &green, &blue, &yellow}
 
 	// Ensure everything we touch gets reset to input
 	defer func() {

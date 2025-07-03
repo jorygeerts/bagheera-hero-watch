@@ -1,6 +1,6 @@
 module github.com/jorygeerts/bagheera-hero-watch
 
-go 1.19.9
+go 1.19
 
 require github.com/warthog618/go-gpiocdev v0.9.1
 
