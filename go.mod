@@ -1,8 +1,7 @@
 module github.com/jorygeerts/bagheera-hero-watch
 
-go 1.23.2
+go 1.19.9
 
-require (
-	github.com/warthog618/go-gpiocdev v0.9.1 // indirect
-	golang.org/x/sys v0.18.0 // indirect
-)
+require github.com/warthog618/go-gpiocdev v0.9.1
+
+require golang.org/x/sys v0.18.0 // indirect
