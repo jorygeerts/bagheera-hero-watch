@@ -1,0 +1,14 @@
+[Unit]
+Description=Bagheera Hero Watch
+After=multi-user.target
+Conflicts=getty@tty1.service
+
+[Service]
+Type=simple
+ExecStart=/home/rpi/bagheera-hero-watch/bagheera-hero-watch
+StandardInput=tty-force
+StandardOutput=inherit
+StandardError=inherit
+
+[Install]
+WantedBy=multi-user.target
