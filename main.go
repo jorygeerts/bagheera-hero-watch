@@ -80,7 +80,7 @@ func main() {
 		if ok {
 			log.Printf("Key '%s' is in team '%s' (pin %d)\n", scanner.Text(), team.name, team.pin)
 			team.line.SetValue(1)
-			time.Sleep(time.Second)
+			time.Sleep(time.Second * 3)
 			team.line.SetValue(0)
 		} else {
 			log.Printf("ERR: Key '%s' doesn't exist\n", scanner.Text())
