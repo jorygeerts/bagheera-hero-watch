@@ -18,7 +18,7 @@ If you're playing around with the lighting pattern, if you're making it longer, 
 
 ## Wiring
 
-**I am NOT an electrical engineer**. Based on what I read online, the following had a good chance of not blowing up my rpi or arduino, and it didn't, but that's fully at your own risk.
+***I am NOT an electrical engineer**. Based on what I read online, the following had a good chance of not blowing up my rpi or arduino, and it didn't, but that's fully at your own risk.*
 
 Simply put, there is a chain of 4 components: RFDI Scanner >> RPi >> Arduino >> NeoPixels. Below describes each stepp.
 
